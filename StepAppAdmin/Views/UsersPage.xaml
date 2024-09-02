@@ -1,0 +1,26 @@
+﻿<Page x:Class="StepAppAdmin.Views.UsersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="Users" Height="450" Width="800">
+  <Grid Margin="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="0" Margin="0,0,0,10">
+      <Button Content="Delete User" Click="DeleteUser_Click"/>
+    </StackPanel>
+
+    <DataGrid x:Name="UsersDataGrid" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+        <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="150"/>
+        <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" Width="150"/>
+        <DataGridTextColumn Header="Date of Birth" Binding="{Binding DateOfBirth}" Width="150"/>
+        <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="250"/>
+      </DataGrid.Columns>
+    </DataGrid>
+  </Grid>
+</Page>

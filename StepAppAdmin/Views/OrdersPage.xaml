@@ -1,0 +1,28 @@
+﻿<Page x:Class="StepAppAdmin.Views.OrdersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="Orders" Height="450" Width="800">
+  <Grid Margin="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="0" Margin="0,0,0,10">
+      <Button Content="View Order Details" Click="ViewOrderDetails_Click" Margin="0,0,10,0"/>
+      <Button Content="Delete Order" Click="DeleteOrder_Click"/>
+    </StackPanel>
+
+    <DataGrid x:Name="OrdersDataGrid" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+        <DataGridTextColumn Header="User ID" Binding="{Binding UserId}" Width="100"/>
+        <DataGridTextColumn Header="Address" Binding="{Binding Address}" Width="250"/>
+        <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="100"/>
+        <DataGridTextColumn Header="Total Price" Binding="{Binding TotalPrice, StringFormat=C}" Width="100"/>
+        <DataGridTextColumn Header="Order Date" Binding="{Binding OrderDate}" Width="150"/>
+      </DataGrid.Columns>
+    </DataGrid>
+  </Grid>
+</Page>

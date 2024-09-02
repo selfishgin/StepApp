@@ -1,0 +1,17 @@
+﻿<Window x:Class="StepApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:StepApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" >
+    <Grid Margin="10">
+
+        <Image Source="C:\Users\Antec\source\repos\StepApp\StepApp\Images\StepMarketLogo-removebg-preview.png" Width="200" Height="200" VerticalAlignment="Top" />
+
+        <Button Background="LightBlue" BorderBrush="LightGray" Content="Log in" Width="200" Height="40" VerticalAlignment="Top" Margin="0,180,0,0" Click="Login_Click"/>
+        <Button Background="LightGray" BorderBrush="LightBlue" Content="Sign up" Width="200" Height="40" VerticalAlignment="Top" Margin="0,230,0,0" Click="SignUp_Click"/>
+    </Grid>
+</Window>
